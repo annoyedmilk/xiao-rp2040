@@ -15,7 +15,7 @@ To dive into these projects, you'll need:
 
 Clone this repository to get started:
 ```
-git clone https://github.com/yourusername/xiao-rp2040.git
+git clone https://github.com/annoyedmilk/xiao-rp2040.git
 ```
 Each project folder includes a README with setup instructions and project details.
 
