@@ -23,13 +23,16 @@ Adafruit_NeoPixel pixels(NumPixels, PixelPin, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   pixels.begin(); // Initialize the NeoPixel library
-  
-  // Set up the power and RGB control pins as outputs
+
+  // Set up the power and individual RGB control pins as outputs
   pinMode(PowerPin, OUTPUT);
-  for (int i = 0; i < 3; i++) {
-    pinMode(RGBControlPins[i], OUTPUT);
-    digitalWrite(RGBControlPins[i], HIGH); // Initially turn off the RGB control pins
-  }
+  pinMode(RedPin, OUTPUT);
+  pinMode(GreenPin, OUTPUT);
+  pinMode(BluePin, OUTPUT);
+
+  digitalWrite(RedPin, HIGH); // Initially turn off the Red control pin
+  digitalWrite(GreenPin, HIGH); // Initially turn off the Green control pin
+  digitalWrite(BluePin, HIGH); // Initially turn off the Blue control pin
   digitalWrite(PowerPin, HIGH); // Turn on the power pin to power up the NeoPixel
 }
 
