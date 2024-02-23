@@ -12,7 +12,6 @@ To dive into these projects, you'll need:
 
 - A Seeeduino XIAO RP2040 microcontroller.
 - The Arduino IDE with Seeeduino XIAO RP2040 support installed.
-- Other components like LEDs, sensors, etc., depending on the project.
 
 Clone this repository to get started:
 ```
