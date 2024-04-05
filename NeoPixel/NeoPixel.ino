@@ -19,6 +19,11 @@ const int RGBControlPins[] = {17, 16, 25}; // R, G, B control pins
 const int PixelPin = 12;
 const int NumPixels = 1;
 
+// Assign individual RGB control pins
+const int RedPin = RGBControlPins[0];   // Assign RedPin to the first element of the array
+const int GreenPin = RGBControlPins[1]; // Assign GreenPin to the second element of the array
+const int BluePin = RGBControlPins[2];  // Assign BluePin to the third element of the array
+
 Adafruit_NeoPixel pixels(NumPixels, PixelPin, NEO_GRB + NEO_KHZ800);
 
 void setup() {
@@ -45,7 +50,7 @@ void colorWipe() {
   for (int i = 0; i < 256; i++) {
     pixels.setPixelColor(0, Wheel(i & 255));
     pixels.show();
-    delay(10); // Control the speed of the color transition
+    delay(100); // Control the speed of the color transition
   }
 }
 
